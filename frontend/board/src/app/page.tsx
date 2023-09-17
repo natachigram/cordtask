@@ -22,7 +22,7 @@ export default function Home() {
   let signer;
   const connect = async () => {
     //@ts-ignore
-    if(window && window.ethereum){
+    if(typeof window !== 'undefined'){
 await provider.send('eth_requestAccounts', ['sepolia']);
 signer = provider.getSigner();
 //@ts-ignore
